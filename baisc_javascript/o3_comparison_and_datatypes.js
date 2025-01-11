@@ -136,3 +136,13 @@
 // x = [1, 2, 3, 4, 5];
 // console.log(x); // logs [1, 2, 3, 4, 5]
 // console.log(typeof x); // logs object
+
+
+// We Often use 'new' keyword to define explicitly the type of a variable.
+// let x = new Number(5); // x is a Number object
+// console.log(x); // logs [Number: 5]
+// console.log(typeof x); // logs object
+
+// x = new String("Hello"); // x is a String object
+// console.log(x); // logs [String: 'Hello']
+// console.log(typeof x); // logs object
