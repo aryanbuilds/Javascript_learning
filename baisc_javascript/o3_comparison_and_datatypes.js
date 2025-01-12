@@ -146,3 +146,4 @@
 // x = new String("Hello"); // x is a String object
 // console.log(x); // logs [String: 'Hello']
 // console.log(typeof x); // logs object
+

@@ -52,3 +52,43 @@ myarr=[1,2,3,4,5,6,7,8,9,10]
 
 //Basically, slice() does not change the original array, but splice() does change the original array.
 
+//---------- NESTED ARRAYS ------------
+
+// USING push() METHOD -> adds elements to existing array doesn't return a new array
+let arr1=["Aryan","Rai"]
+let arr2=["abc","def"]
+// arr1.push(arr2)
+// console.log(arr1) // ["Aryan","Rai",["abc","def"]]
+// console.log(arr1[2][1]) // def -> accessing nested array
+
+// USING concat() METHOD -> returns a new array
+//arr3 = arr1.concat(arr2)
+// console.log(arr3) // ["Aryan","Rai","abc","def"]
+
+//------SPREAD OPERATOR------
+// Breaking of Glass -> Spread Operator
+// The spread operator is used to unpack elements of an array or an object.
+// It is used to make a shallow copy of an array or an object.
+
+// USING spread operator
+arr3 = [...arr1,...arr2]
+// console.log(arr3) // ["Aryan","Rai","abc","def"]
+
+// USING spread operator to add elements to an array
+arr4 = [...arr1,"abc","def"]
+// console.log(arr4) // ["Aryan","Rai","abc","def"]
+
+// USing FLAT() method
+const array_new=[1,2,3,[4,5,6,[7,8,9,[10,11,12]]]]
+//arr_flat=array_new.flat(Infinity) //-> flat method is used to flatten the array
+//console.log(arr_flat) // [1,2,3,4,5,6,7,8,9,10,11,12] -> nested array is flattened
+
+// Convert to Array
+// 1. Array.from() method -> converts a string to an array
+//console.log(Array.from("Aryan")) // ["A","r","y","a","n"]
+
+//------INTERESTING CASE of FORM with Object------
+//console.log(Array.from({name:"Aryan",age:19})) // [] -> empty array because object is not iterable
+
+// 2. Array.of() method -> converts a list of arguments to an array
+//console.log(Array.of(1,2,3,4,5)) // [1,2,3,4,5]
