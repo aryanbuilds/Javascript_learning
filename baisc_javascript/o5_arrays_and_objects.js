@@ -92,3 +92,77 @@ const array_new=[1,2,3,[4,5,6,[7,8,9,[10,11,12]]]]
 
 // 2. Array.of() method -> converts a list of arguments to an array
 //console.log(Array.of(1,2,3,4,5)) // [1,2,3,4,5]
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//*****************OBJECT***************************
+
+//single line object
+//Object.crete() method
+
+
+// OBJECT METHODS
+// const obj = {name:"Aryan"}
+
+// console.log(obj.name) // Aryan
+
+// GOOD TECHNIQUE to Access Object Properties
+// console.log(obj["name"]) // Aryan, -> this is useful when the property name is stored in a variable for example,
+
+// const obj1={
+//     name:"Aryan",
+//     "Full name":"Aryan Rai", // The problem here is you can't access this property using dot notation
+//     age:19,
+//     city:"Delhi"
+// }
+
+// console.log(obj1["Full name"]) // Aryan Rai
+
+// ----------------IMPORTANT = USING SYMBOLS in OBJECTS----------------
+// Symbols are used to create unique identifiers for objects.
+// Symbols are used to create private properties in objects.   
+
+// const id=Symbol("value") // creating a symbol
+
+// const obj_with_symbol={
+//     name:"Aryan",
+//     age:19,
+//     city:"Delhi",
+//     [id]:12345 // Using Symbol as a key
+// }
+
+// console.log(obj_with_symbol[id]) // 12345 -> accessing the property using symbol
+
+// obj_with_symbol.name = "Aryan Rai" // changing the value of the property
+// // console.log(obj_with_symbol) // {name: "Aryan Rai", age: 19, city: "Delhi", Symbol(value): 12345}
+
+//// Making the object immutable
+// Object.freeze(obj_with_symbol) // freezing the object, now the object is immutable
+// obj_with_symbol.name = "Aryan" // trying to change the value of the property
+// console.log(obj_with_symbol) // {name: "Aryan Rai", age: 19, city: "Delhi", Symbol(value): 12345} -> no change
+
+// obj_with_symbol.adding_fun= function(){
+//     console.log("THIS IS TO ADD FUNCTION")
+// }
+
+// console.log(obj_with_symbol.adding_fun); // fucntion [[anonymous]] -> as only reference of function has been returned bu function is ot executed
+// console.log(obj_with_symbol.adding_fun()); // THIS IS TO ADD FUNCTION Undefined
+
+
+
+// --++--++--++--++--SINGLETON OBJECT OR OBJECT WITH CONSTRUCTOR(const)--++--++--++--++--
+
+// const obj_with_constructor = new Object() // SINGLETON OBJECT
+//const obj_without_singleton = {} // normal declaration 
+
+// console.log(obj_with_constructor); // -> {} empty object
+// console.log(obj_without_singleton); //-> {} output is same thus no difference
+
+const userCred ={}
+
+userCred.name = "Aryan"
+userCred.id = 123
+userCred.isloggedin = true
+
+console.log(userCred); // {name:"Aryan", id=123,isloggedin=true}
