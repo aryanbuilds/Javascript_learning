@@ -177,4 +177,85 @@ const userNesObj = {
     }
 }
 
-console.log(userNesObj.fullname) // {userfullname:{firstname:"Aryan",lastname:"Rai"}}
+// console.log(userNesObj.fullname) // {userfullname:{firstname:"Aryan",lastname:"Rai"}}
+
+// console.log(userNesObj.fullname.userfullname.firstname) // Aryan
+
+// // OPTIONAL CHAINING -> ? is used to check if the property exists or not
+
+// console.log(userNesObj.fullname?.userfullname.firstname) // Aryan 
+
+// COPY OBJECT
+
+const obj1 = {1:'a',2:'b'}
+const obj2 = {3:'c',4:'d'}
+
+// const obj3 = {obj1,obj2}
+// console.log(obj3) // {obj1:{1:'a',2:'b'},obj2:{3:'c',4:'d'}} -> same problem as array it creates a nested obj.
+
+// const obj3 = Object.assign({},obj1,obj2) // -> assign(target, source) so here 
+
+console.log(obj3) // {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+
+// You'll mostly use spread operator to copy objects
+const obj3 = {...obj1,...obj2} // -> spread operator
+console.log(obj3) // {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+
+// PRACTICAL EXAMPLE WHEN USERS DATA IS FETCHED FROM AN API CALL FROM A DATABASE
+// USUSALLY ALL THE DATA IS IN FORM OF ARRAY UNDER WHICH THEIR ARE SEVERAL OBJ
+
+const user = [
+    {
+        id: 1,
+        email: "you@gmail.com"
+    },
+    {
+        id: 2,
+        email: "trial@gmail.com"
+    },
+    {
+        id: 3,
+        email: "fun@gmail.com"
+    }
+]
+// console.log(user[1].email) // trial@gmail.com
+
+// KEYS AND VALUES OF OBJECT ARE RETURNED AS ARRAY USEFULL WHEN WORKING WITH DATABASE
+
+// console.log(Object.keys(userCred)); // ["name", "id", "isloggedin"]
+
+// console.log(Object.values(userCred)); // ["Aryan", 123, true]
+
+// console.log(Object.entries(userCred)); // [[name:"Aryan"],[id:123],[isloggedin:true]]
+
+
+//+++++++++++++++++++++ DE-STRUCTURING +++++++++++++++++++++++++++++
+// BAsically joh chhaiye ushi ko as a varibale use karlo bash usha curly braces {} use karta hai
+const user1 = {
+    id: 1,
+    email: "user1@gmail.com",
+    password: "1234",
+    isloggedin: true
+}
+
+// user1.email -> very time consuming method.
+
+// const {value you need} = objectname
+// -----const {email} = user1 // de-structuring -----
+// const.log(email) // user1@gmail.com
+
+// const {value you need: RENAME IT WITH OTHER NAME IF WANT} = objectname
+const {password: pass} = user1
+
+console.log(pass) // 1234
+
+
+// ----- JSON API----
+
+// {
+
+// }
+
+// [
+
+// ]
