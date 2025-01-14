@@ -166,3 +166,15 @@ userCred.id = 123
 userCred.isloggedin = true
 
 console.log(userCred); // {name:"Aryan", id=123,isloggedin=true}
+
+const userNesObj = {
+    email: "try@gmail.com",
+    fullname: {
+        userfullname: {
+            firstname: "Aryan",
+            lastname: "Rai"
+        }
+    }
+}
+
+console.log(userNesObj.fullname) // {userfullname:{firstname:"Aryan",lastname:"Rai"}}
