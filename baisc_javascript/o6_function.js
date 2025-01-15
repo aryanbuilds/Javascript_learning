@@ -79,3 +79,46 @@ function userwithobj(anyobject){
 //     username: "AryanRai",
 //     email: "any@gmail.com"
 // }) // The user is Aryan and his username is AryanRai
+
+
+// +++++++++++++++++THIS AND ARROW FUNCTION++++++++++++++++++++
+
+// const user = {
+//     name: "Aryan",
+//     username: "AryanRai", // CURRENT CONTEXT
+//     email: "trial@gmail.com",
+
+//     WelcomeMessage: function(){
+//         console.log(`${this.username}, welcome to website`) // CURRENT CONTETXT to REFER using this
+//         // console.log(this) // prints the whole object
+//     }
+// }
+
+// user.WelcomeMessage() // AryanRai, welcome to website
+// user.username = "Raia" // CHANGING THE VALUE OF USERNAME
+// user.WelcomeMessage() // Raia, welcome to website
+
+// console.log(this) // WINDOW OBJECT -> as we are not in any object (WHEN YOU RUN IN BROWSER)
+// console.log(this) // {} ->empty object as we are not in any object (WHEN YOU RUN IN NODE JS SERVER)
+
+// THIS Can not be ued in fucntion
+
+// function userfun(){
+//     let user = "Aryan"
+//     // console.log(this) // full description of fucntion wehn user variable not declared
+//     console.log(this.user) // undefined as context only works in object 
+// }
+// userfun() // undefined
+
+
+// ARROW FUNCTION -> DOES NOT HAVE ITS OWN THIS KEYWORD
+
+const userarrow = () => {
+    console.log(this) // {} -> empty object
+}
+userarrow() // {} -> empty object
+
+// IMPLICiT RETURN -> single line logic for exmaple adding two number
+// const sum = (a,b) => (a+b) //() paranthesis use kara hai isliye,YADH RAKHNA KI AGAR SINGLE LINE LOGIC HAI TOH RETURN KI JARURAT NAHI HAI SILS
+// console.log(sum(3,4)); // 7
+const implicituserarrow = () => this // {} -> empty object
