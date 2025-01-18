@@ -122,3 +122,20 @@ userarrow() // {} -> empty object
 // const sum = (a,b) => (a+b) //() paranthesis use kara hai isliye,YADH RAKHNA KI AGAR SINGLE LINE LOGIC HAI TOH RETURN KI JARURAT NAHI HAI SILS
 // console.log(sum(3,4)); // 7
 const implicituserarrow = () => this // {} -> empty object
+
+
+//---------- IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE) ------------
+
+// (function(){
+//     console.log("IIFE")
+// })() // IIFE -> IMMEDIATELY INVOKED FUNCTION EXPRESSION // FUNCITON NO CLOSED CAN CAUSE ERROR
+
+//USEFUL WHEN YOU WANT TO EXECUTE A FUNCTION IMMEDIATELY such as data fetching from API
+
+// ISOLATES THE SCOPE OF THE FUNCTION FROM GLOBAL SCOPE
+
+// IIFE AS ARROW FUNCTION
+
+(()=>{
+    console.log("IIFE with arrow function")
+})(); // -> IIFE with arrow function ,CLOSED PROPERLY TO TELL TO STOP HERE.
