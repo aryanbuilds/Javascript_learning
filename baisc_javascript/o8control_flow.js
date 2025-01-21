@@ -98,7 +98,7 @@ switch (role) {
 }
 
 // 6. Truthy & Falsy Values
-// Theory: Falsy values are false, 0, "", null, undefined, NaN. Truthy values are everything else.
+// Theory: Falsy values are false, 0,-0,BigInt "", null, undefined, NaN. Truthy values are everything else.
 
 // Empty Array Check Example
 let arr = [];
