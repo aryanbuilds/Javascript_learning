@@ -1,65 +1,67 @@
-// Higher Order Array Loops in JavaScript
-
-// Example of putting objects inside arrays and accessing values through loops
+// 01:42 Putting objects inside arrays and accessing values through loops
 const students = [
-    { name: 'John', age: 18 },
-    { name: 'Jane', age: 20 },
-    { name: 'Jim', age: 19 }
+    { name: 'John', age: 20 },
+    { name: 'Jane', age: 22 },
+    { name: 'Jim', age: 21 }
 ];
 
-// Using forEach to loop through the array
-students.forEach(student => {
-    console.log(`Name: ${student.name}, Age: ${student.age}`);
+students.forEach(function(student) {
+    console.log(student.name + ' is ' + student.age + ' years old');
 });
 
-// Introduction to maps in JavaScript
-const studentMap = new Map();
-studentMap.set('John', { age: 18 });
-studentMap.set('Jane', { age: 20 });
-studentMap.set('Jim', { age: 19 });
+// 05:19 Introduction to maps in JavaScript
+const map = new Map();
+map.set('name', 'John');
+map.set('age', 20);
 
-// Setting values in an object and accessing data from objects
-const studentObj = {
-    John: { age: 18 },
-    Jane: { age: 20 },
-    Jim: { age: 19 }
+console.log(map.get('name')); // John
+console.log(map.get('age')); // 20
+
+// 07:10 Setting values in an object and accessing data from objects
+const person = {
+    name: 'Jane',
+    age: 22
 };
 
-console.log(studentObj['John'].age); // Accessing data from object
+person.city = 'New York';
+console.log(person);
 
-// Using high order array loops in JavaScript
+// 11:02 Using high order array loops in JavaScript
 const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(function(num) {
+    return num * 2;
+});
+console.log(doubled); // [2, 4, 6, 8, 10]
 
-// Using map to create a new array with doubled values
-const doubledNumbers = numbers.map(num => num * 2);
-console.log(doubledNumbers);
+// 13:24 Working with high order array loops for JavaScript
+const filtered = numbers.filter(function(num) {
+    return num > 2;
+});
+console.log(filtered); // [3, 4, 5]
 
-// Using filter to create a new array with numbers greater than 2
-const filteredNumbers = numbers.filter(num => num > 2);
-console.log(filteredNumbers);
-
-// Using reduce to sum all numbers in the array
-const sum = numbers.reduce((acc, num) => acc + num, 0);
-console.log(sum);
-
-// Loops in JavaScript arrays
+// 18:09 Loops in JavaScript arrays
 for (let i = 0; i < numbers.length; i++) {
     console.log(numbers[i]);
 }
 
-// Maps cannot be iterated over in a loop like arrays
-// Instead, use forEach or for...of
-studentMap.forEach((value, key) => {
-    console.log(`Name: ${key}, Age: ${value.age}`);
+// 20:02 Maps cannot be iterated over in a loop like arrays
+// This will throw an error
+// for (let i = 0; i < map.length; i++) {
+//   console.log(map[i]);
+// }
+
+// Correct way to iterate over a Map
+map.forEach(function(value, key) {
+    console.log(key + ': ' + value);
 });
 
-// Functions in JavaScript automatically know the scope and parameters
+// 23:36 Functions in JavaScript automatically know the scope and parameters
 function greet(name) {
-    console.log(`Hello, ${name}!`);
+    console.log('Hello, ' + name);
 }
-greet('John');
+greet('John'); // Hello, John
 
-// Understanding the concept of named and anonymous functions in JavaScript
+// 25:21 Understanding the concept of named and anonymous functions in JavaScript
 const namedFunction = function named() {
     console.log('This is a named function');
 };
@@ -71,13 +73,13 @@ const anonymousFunction = function() {
 namedFunction();
 anonymousFunction();
 
-// Accessing values inside objects using array loops
-const people = [
-    { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 30 },
-    { name: 'Charlie', age: 35 }
-];
+// 29:21 Understanding high order array loops in JavaScript
+const sum = numbers.reduce(function(acc, num) {
+    return acc + num;
+}, 0);
+console.log(sum); // 15
 
-for (const person of people) {
-    console.log(`Name: ${person.name}, Age: ${person.age}`);
-}
+// 31:29 Accessing values inside objects using array loops
+students.forEach(function(student) {
+    console.log(student.name);
+});
