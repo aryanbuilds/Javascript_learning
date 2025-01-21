@@ -115,7 +115,7 @@ if (Object.keys(obj).length === 0) {
 // 7. Nullish Coalescing Operator
 // Theory: The Nullish Coalescing Operator (`??`) returns the right-hand operand when the left-hand operand is null or undefined.
 
-// Nullish Coalescing Operator Example
+// Nullish Coalescing Operator (??) Example
 let userInput = null;
 let defaultValue = "default";
 console.log(userInput ?? defaultValue); // Example: "default" will be logged because userInput is null.
