@@ -41,3 +41,30 @@
 
 //++++++++++++++++++++++ WHILE LOOP ++++++++++++++++++++++++++++
 
+// //  while loop
+// // A while loop repeats a block of code as long as a specified condition is true.
+let count = 0;
+while (count < 5) {
+    console.log("Count is: " + count);
+    count++;
+}
+
+// //  do while loop
+// // A do while loop is similar to a while loop, but it executes the block of code at least once before checking the condition.
+let number = 0;
+do {
+    console.log("Number is: " + number);
+    number++;
+} while (number < 5);
+
+// //  nested do while loop
+// // A do while loop inside another do while loop is called a nested do while loop.
+let outer = 0;
+do {
+    let inner = 0;
+    do {
+        console.log("Outer: " + outer + ", Inner: " + inner);
+        inner++;
+    } while (inner < 3);
+    outer++;
+} while (outer < 3);
