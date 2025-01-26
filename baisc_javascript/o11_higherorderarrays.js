@@ -94,7 +94,7 @@ const sum = numbers.reduce(function(acc, num) {
 }, 0);
 console.log(sum); // 15
 
-// 31:29 Accessing values inside objects using array loops
+// ++++++++++++++++++++Accessing values inside objects using array loops+++++++++++++++++++
 students.forEach(function(student) {
     console.log(student.name);
 });
