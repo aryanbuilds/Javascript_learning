@@ -3,6 +3,14 @@
 // Example array
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+// ------------------ IMPORTANT POINT OF FOREACH---------------------
+// const storing_value  = numbers.forEach( (num) => {
+//     // console.log(num);
+//     return num;
+// })
+
+// console.log(storing_value); // undefined -> because forEach does not return anything
+
 // Filter: naya array banata hai jo sirf un elements ko rakhta hai jo test pass karte hain
 const evenNumbers = numbers.filter(num => num % 2 === 0);
 console.log('Even Numbers:', evenNumbers); // [2, 4, 6, 8, 10]
@@ -12,7 +20,7 @@ const incrementedNumbers = numbers.map(num => num + 10);
 console.log('Incremented Numbers:', incrementedNumbers); // [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 // Reduce: array ke har element par function apply karke ek single value return karta hai
-const sum = numbers.reduce((acc, currentValue) => acc + currentValue, 0);
+const sum = numbers.reduce((Accumulator, currentValue) => Accumulator + currentValue, 0);
 console.log('Sum of Numbers:', sum); // 55
 
 // Users ke books ko filter aur print karna
