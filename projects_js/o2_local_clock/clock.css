@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg,rgb(178, 165, 255) 0%, rgb(255, 242, 175) 100%);
+}
+
+h1 {
+  margin-bottom: 50px;
+  color:rgb(73, 61, 158);
+}
+
+.clock {
+  height: 100px;
+  width: 150px;
+  background-color: rgb(73, 61, 158);
+  border-radius: 40px;
+  justify-content: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */ /* this is not working */
+  font-size: 30px;
+  color: rgb(248, 255, 171);
+}
