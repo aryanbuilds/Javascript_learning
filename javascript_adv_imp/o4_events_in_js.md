@@ -122,11 +122,11 @@ Event propagation determines how events travel through the DOM.
 ```javascript
 document.getElementById("parent").addEventListener("click", function() {
     alert("Parent Clicked!");
-});
+},false);
 
 document.getElementById("child").addEventListener("click", function() {
     alert("Child Clicked!");
-});
+},false);
 ```
 - Clicking `child` will also trigger `parent` due to bubbling.
 
@@ -140,6 +140,10 @@ document.getElementById("child").addEventListener("click", function() {
 document.getElementById("parent").addEventListener("click", function() {
     alert("Parent Clicked!");
 }, true); // Capturing mode enabled
+
+document.getElementById("child").addEventListener("click", function() {
+    alert("Child Clicked!");
+},true);
 ```
 
 ---
