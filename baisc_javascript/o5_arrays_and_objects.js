@@ -1,3 +1,6 @@
+## Arrays and Objects in JavaScript
+
+```javascript
 //*****************ARRAY***************************
 
 // Shallow copy is a copy of the array, but not the elements of the array.
@@ -9,7 +12,7 @@
 
 // ARRAY METHODS
 
-myarr=[1,2,3,4,5,6,7,8,9,10]
+myarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // 1. push() - adds an element to the end of the array
 //myarr.push(11)
@@ -71,7 +74,7 @@ let arr2=["abc","def"]
 // It is used to make a shallow copy of an array or an object.
 
 // USING spread operator
-arr3 = [...arr1,...arr2]
+arr3 = [...arr1, ...arr2]
 // console.log(arr3) // ["Aryan","Rai","abc","def"]
 
 // USING spread operator to add elements to an array
@@ -161,6 +164,7 @@ const array_new=[1,2,3,[4,5,6,[7,8,9,[10,11,12]]]]
 
 const userCred ={}
 
+
 userCred.name = "Aryan"
 userCred.id = 123
 userCred.isloggedin = true
@@ -198,7 +202,7 @@ const obj2 = {3:'c',4:'d'}
 console.log(obj3) // {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
 
 // You'll mostly use spread operator to copy objects
-const obj3 = {...obj1,...obj2} // -> spread operator
+const obj3 = { ...obj1, ...obj2 } // -> spread operator
 console.log(obj3) // {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
 
 // PRACTICAL EXAMPLE WHEN USERS DATA IS FETCHED FROM AN API CALL FROM A DATABASE
