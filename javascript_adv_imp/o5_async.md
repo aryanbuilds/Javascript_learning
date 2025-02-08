@@ -64,7 +64,7 @@ fs.readFile('/file.md', (err, data) => {
 **07:22** Difference between blocking and non-blocking code.
 ### Example:
 Blocking code stops further execution until the operation completes, while non-blocking code allows other operations to continue.
-
+![alt text](image.png)
 ## Importance of Blocking and Non-Blocking Code
 **09:09** Understanding the importance of writing both blocking and non-blocking code in JavaScript.
 ### Example:
