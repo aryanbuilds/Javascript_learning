@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THIS IS ASYNC JS PRACTICE PROJECTS</h1>
+    <button id="button">CLICK ME TO STOP HEADING CHANGE</button>
+    <!-- 
+        setTimeout() function -> it is used to delay the execution of the function
+        setTimeout(handler, time) -> handler is the function to be executed but pass a reference to this, 
+        time is the time in milliseconds after which the function will be executed.
+        
+        setInterval() function -> it is used to repeat the execution of the function.
+        setInterval(handler, time) -> handler is the function to be executed but pass a reference to this, 
+        time is the time in milliseconds after which the function will be executed.
+    -->
+    <script>
+        // setTimeout(function() {
+        //     console.log("This is a setTimeout function");
+        // }, 3000);
+
+        // setInterval(function() {
+        //     console.log("This is a setInterval function");
+        // }, 2000);
+
+        // const sayhello = function (){
+        //     console.log("Hello");
+        // }
+
+        const HelloAsync = function (){
+            document.querySelector('h1').innerHTML = "Hello this is async js";
+        }
+        // setTimeout(sayhello, 3000);//sayhello is a reference to the function not exexuting the function 'sayhello()'.
+           const timeoutId = setTimeout(HelloAsync, 2000); 
+        // WHAT IF YOU Want to stop the heading change when you click the button
+        document.querySelector('button').addEventListener('click', function(){
+            clearTimeout(timeoutId); // timeoutId is the reference to the setTimeout function
+            console.log("Heading change stopped");
+        })
+    
+    </script>
+</body>
+</html>
