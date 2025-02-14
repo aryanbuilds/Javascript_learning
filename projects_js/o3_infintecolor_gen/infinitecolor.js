@@ -5,6 +5,7 @@ const infinitecolor = function(){
         color += hex[Math.floor(Math.random() * 16)];
     }
     return color;
+    
 };
 
 let intervaltime = null; // Initially, interval is not running
