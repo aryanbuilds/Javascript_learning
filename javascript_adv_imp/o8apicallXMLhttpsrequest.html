@@ -7,6 +7,36 @@
 </head>
 <body>
     <h1>THIS IS API CALL and V8 ENGINE</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>UNSENT - Client has been created. open() not called yet.</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>OPENED - open() has been called.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HEADERS_RECEIVED - send() has been called, and headers and status are available.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>LOADING - Downloading; responseText holds partial data.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>DONE - The operation is complete.</td>
+            </tr>
+        </tbody>
+    </table>
     
 </body>
 <script>
