@@ -42,6 +42,7 @@ const myPromise = new Promise((resolve, reject) => { // new Creates a new promis
 });
 
 // Consume the promise
+// mypromise.then(function(){}).catch(function(){}).finally(function(){}), Also you can use as many .then() as you want.
 myPromise
   .then((data) => {
     console.log("Resolved:", data); // Handle fulfillment
