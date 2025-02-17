@@ -116,3 +116,37 @@ Promise.race([promiseA, promiseB])
   .catch((error) => {
     console.error("One or more rejected:", error);
   });
+
+
+
+
+// PTACTISE OF PROMSIES AND CHAINING
+const promisefive = new Promise((resolve,reject) =>{
+
+    setTimeout(function(){
+      const  failure =false;
+      if(!failure){ // if failure is false (!failure -> !false = true), then the if block will run.
+        // !failure: The '!' operator negates the value of 'failure'.
+        //   - If failure is true, !failure becomes false.
+        //   - If failure is false, !failure becomes true.
+        resolve({username:"Aryan Rai", passwordhash:"^EUV#JDHV&#dJ=", age:20});
+
+      } else{
+        reject("FAILURE FROM DB CONNECTION");
+      }
+    },2000);
+  });
+
+promisefive
+.then( (userdata)=>{ // used to Handles only fulfillment.
+  console.log(userdata);
+  return userdata.username;
+})
+.then((username)=>{
+  console.log("USERNAME IS :", username); // USERNAME IS : Aryan Rai
+})
+.catch((error)=>{ // USED TO HANDLE REJECTIONS ONLY
+  console.log("ERROR GENERATED DUE TO",error)
+}) 
+
+// OUTPUT ;- { username: 'Aryan Rai', passwordhash: '^EUV#JDHV&#dJ=', age: 20 } \n USERNAME IS : Aryan Rai
