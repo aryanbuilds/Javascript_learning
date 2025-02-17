@@ -26,7 +26,8 @@
  *
  * Example: Basic Promise
  */
-C644-1212
+
+
 // Create a promise
 const myPromise = new Promise((resolve, reject) => { // new Creates a new promise instance, it was available after ES6.
   // Simulate an asynchronous operation (e.g., fetching data)
