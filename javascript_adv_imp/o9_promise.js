@@ -174,3 +174,5 @@ async function myasyncfucntion() {
 }
 myasyncfucntion();
 
+
+// OUTPUT: { username: 'HARSH MAL HAI', passwordhash: 'MALHIAMALBADABADA6969=', age: 20 }
