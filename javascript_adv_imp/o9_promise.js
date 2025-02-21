@@ -151,4 +151,26 @@ promisefive
 
 // OUTPUT ;- { username: 'Aryan Rai', passwordhash: '^EUV#JDHV&#dJ=', age: 20 } \n USERNAME IS : Aryan Rai
 
+// AYSNC AND AWAIT KEYWORD
+
+const asyncpromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const failure = false;
+    if (!failure) {
+      resolve({ username: "HARSH MAL HAI", passwordhash: "MALHIAMALBADABADA6969=", age: 20 });
+    } else {
+      reject("FAILURE");
+    }
+  }, 2000);
+});
+
+async function myasyncfucntion() {
+  try {
+    const userdata = await asyncpromise;
+    console.log(userdata);
+  } catch (error) {
+    console.log(error);
+  }
+}
+myasyncfucntion();
 
