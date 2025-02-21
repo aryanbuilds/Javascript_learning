@@ -196,6 +196,26 @@ async function asyncapicall() {
 asyncapicall();
 
 // Fetch call
+// ISSUES IN BELOW PROGRAM:-
+// AT 208 - return datafromabovethen.username;is an array of users, not a single user object.
+// AT 210 - console.log(username);  // UNDEFINED ERROR
+// SOLUTION:-
+//The API returns an array of users.
+//datafromabovethen[0].username accesses the username of the first user.
+//Now, the .then(username => console.log(username)) will correctly print the username.
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then((response)=>{
+//   return response.json();
+// })
+// .then((datafromabovethen)=>{
+//   console.log(datafromabovethen);
+//   return datafromabovethen.username;
+// })
+// .then((username)=>{
+//   console.log(username);  // UNDEFINED ERROR
+// })
+// .catch((error) => console.log("E",error))
 
 fetch("https://jsonplaceholder.typicode.com/users")
 .then((response)=>{
@@ -203,5 +223,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
 })
 .then((datafromabovethen)=>{
   console.log(datafromabovethen);
+  return datafromabovethen[0].username;
+})
+.then((username)=>{
+  console.log(username);  
 })
 .catch((error) => console.log("E",error))
+
+
