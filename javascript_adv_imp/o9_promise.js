@@ -180,3 +180,17 @@ myasyncfucntion();
 
 
 // OUTPUT: { username: 'HARSH MAL HAI', passwordhash: 'MALHIAMALBADABADA6969=', age: 20 }
+
+
+// API HANDLING USING ASYNC 
+
+async function asyncapicall() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await response.json(); // it take time to covnert the response into json format.
+    console.log(data);
+  } catch (error) {
+    console.log("E", error);
+  }
+}
+asyncapicall();
