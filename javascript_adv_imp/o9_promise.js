@@ -151,7 +151,11 @@ promisefive
 
 // OUTPUT ;- { username: 'Aryan Rai', passwordhash: '^EUV#JDHV&#dJ=', age: 20 } \n USERNAME IS : Aryan Rai
 
-// AYSNC AND AWAIT KEYWORD
+// AYSNC AND AWAIT KEYWORD -> used to make task not proceed until the promise is resolved.
+// async keyword is used to make a function asynchronous.
+// await keyword is used to make a function wait until the promise is resolved.
+// async and await are used to make the code more readable and understandable.
+
 
 const asyncpromise = new Promise((resolve, reject) => {
   setTimeout(() => {
