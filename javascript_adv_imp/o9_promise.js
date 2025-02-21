@@ -150,3 +150,5 @@ promisefive
 }) 
 
 // OUTPUT ;- { username: 'Aryan Rai', passwordhash: '^EUV#JDHV&#dJ=', age: 20 } \n USERNAME IS : Aryan Rai
+
+
