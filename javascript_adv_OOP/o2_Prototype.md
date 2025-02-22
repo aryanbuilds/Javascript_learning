@@ -127,7 +127,7 @@ Array.prototype.heyHitesh = function(){
 // myHeros.heyHitesh() -> this will work, array method used by object.
 // heroPower.heyHitesh() -> this doesn;t have access to heropower object as it's on top heirarchy simply it's an object thus it can use method for array.
 
-// inheritance
+// Protoypal inheritance -> kishi aur ki property ko keshe access kar sakta hoh.
 
 const User = {
     name: "chai",
