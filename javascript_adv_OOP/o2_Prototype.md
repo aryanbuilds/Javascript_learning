@@ -66,6 +66,8 @@ const animal1 = new Animal('Dog');
 animal1.speak(); // Dog makes a sound
 ```
 ### *You don't have to write Prototype keyword always (see line chai.printme()).*
+
+# IMPORTANCE OF 'new' Keyword
 ```javascript
 function createUser(username, score){
     this.username = username
