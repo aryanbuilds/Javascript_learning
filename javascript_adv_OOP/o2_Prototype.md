@@ -113,7 +113,7 @@ let heroPower = {
         console.log(`Spidy power is ${this.spiderman}`);
     }
 }
-
+// OBJECT IS top hierarchy thus injecting it with a method also makes it available to other arrays, strings and functions.
 Object.prototype.hitesh = function(){
     console.log(`hitesh is present in all objects`);
 }
@@ -122,10 +122,10 @@ Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
 }
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+// heroPower.hitesh() -> this work too, Object method used by object.
+// myHeros.hitesh() -> this work too, Object method used by array.
+// myHeros.heyHitesh() -> this will work, array method used by object.
+// heroPower.heyHitesh() -> this doesn;t have access to heropower object as it's on top heirarchy simply it's an object thus it can use method for array.
 
 // inheritance
 
