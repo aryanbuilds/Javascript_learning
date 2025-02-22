@@ -2,17 +2,19 @@
 
 ## 00:03 JavaScript Classes and Object-Oriented Programming in Great Detail
 JavaScript classes are templates for creating objects. They encapsulate data with code to work on that data. Classes in JavaScript are syntactic sugar over the existing prototype-based inheritance.
-
+- CONSTRUCTOR FUNCTION using 'new' keyword
+- whenever you use 'new' keyword an empty object is created called INSTANCE.
+- Constructor function is called due to 'this' and thus all values are stored in it and returned.
 ```javascript
 class Person {
     constructor(name, age) {
         this.name = name;
-        this.age = age;
+        this.age = age; // this is a obeject therefore you can store value in this
     }
 
     greet() {
         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    }
+    } // this keyword used to set context
 }
 
 const person1 = new Person('John', 30);
