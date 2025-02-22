@@ -65,7 +65,7 @@ Animal.prototype.speak = function() {
 const animal1 = new Animal('Dog');
 animal1.speak(); // Dog makes a sound
 ```
-### *You don't have to write Prototype keyword always (see line chai.printme()).*
+### <span style="color:green">You don't have to write Prototype keyword always (see line chai.printme()).</span>
 
 ```javascript
 function createUser(username, score){
@@ -93,6 +93,77 @@ Jab ek object `new` keyword ka use karke create kiya jata hai, to yeh constructo
 
 ## 26:54 JavaScript mein prototypes ka concept samajhna
 Prototypes ko samajhna zaroori hai kyunki yeh JavaScript mein inheritance kaise kaam karta hai yeh batata hai.
+- <span style="color:green">FUNCTION, ARRAY AND STRINGS ALL PASS THROUGH **OBJECT**.THUS, method(functions) available to use for object will also be accessible by other function, array and string too.</span>
+![alt text](image-2.png)
+```javascript
+// let myName = "hitesh     "
+// let mychannel = "chai     "
+
+// console.log(myName.trueLength);
+
+
+let myHeros = ["thor", "spiderman"]
+
+
+let heroPower = {
+    thor: "hammer",
+    spiderman: "sling",
+
+    getSpiderPower: function(){
+        console.log(`Spidy power is ${this.spiderman}`);
+    }
+}
+
+Object.prototype.hitesh = function(){
+    console.log(`hitesh is present in all objects`);
+}
+
+Array.prototype.heyHitesh = function(){
+    console.log(`Hitesh says hello`);
+}
+
+// heroPower.hitesh()
+// myHeros.hitesh()
+// myHeros.heyHitesh()
+// heroPower.heyHitesh()
+
+// inheritance
+
+const User = {
+    name: "chai",
+    email: "chai@google.com"
+}
+
+const Teacher = {
+    makeVideo: true
+}
+
+const TeachingSupport = {
+    isAvailable: false
+}
+
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport
+}
+
+Teacher.__proto__ = User
+
+// modern syntax
+Object.setPrototypeOf(TeachingSupport, Teacher)
+
+let anotherUsername = "ChaiAurCode     "
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`);
+    console.log(`True length is: ${this.trim().length}`);
+}
+
+anotherUsername.trueLength()
+"hitesh".trueLength()
+"iceTea".trueLength()
+```
 
 ## 28:37 JavaScript mein true string length property implement karna
 Aap built-in objects jaise String ke prototype mein properties add kar sakte hain.
