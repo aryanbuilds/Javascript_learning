@@ -176,26 +176,3 @@ String.prototype.trueLength = function() {
 const str = "Hello World";
 console.log(str.trueLength()); // 10
 ```
-
-## 32:25 Prototype ka use karke properties aur methods ko objects mein add aur access karna
-Prototypes ka use karke aap properties aur methods ko objects mein efficiently add aur access kar sakte hain.
-
-## 34:27 JavaScript mein prototype objects ki power aur properties samajhna
-Prototype objects powerful hote hain kyunki yeh instances ke across shared properties aur methods ki suvidha dete hain.
-
-## 38:08 JavaScript development mein teaching support aur object properties
-Prototypes ko samajhna JavaScript development ko sikhane aur support karne ke liye crucial hai.
-
-## 39:53 Prototypes ka use karke properties ko access karna
-Properties ko prototype chain ka use karke access kiya ja sakta hai.
-
-## 43:18 JavaScript mein properties ko directly access aur manipulate karna
-Properties ko directly object par ya uske prototype ke through access aur manipulate kiya ja sakta hai.
-
-## 45:01 JavaScript prototypes mein true length property ko access aur use karna
-True length property ko access aur use karke string ki length bina spaces ke paayi ja sakti hai.
-
-```javascript
-const exampleString = "Hello Prototype";
-console.log(exampleString.trueLength()); // 14
-```
