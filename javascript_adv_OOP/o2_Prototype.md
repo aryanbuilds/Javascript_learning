@@ -2,13 +2,15 @@
 
 ## 00:02 JavaScript mein Prototype
 JavaScript mein Prototype ek unique aur interesting concept hai jo objects ko doosre objects se properties aur methods inherit karne ki suvidha deta hai.
-
+![alt text](image.png)
+- As you can see above the Prototype is responsible for accessing method.
+![alt text](image-1.png)
 ## 01:50 JavaScript mein prototype behavior samajhna
 Har JavaScript object ka ek prototype hota hai. Ek prototype bhi ek object hota hai. Sabhi JavaScript objects apne prototype se properties aur methods inherit karte hain.
 
 ## 05:28 JavaScript mein prototype inheritance samajhna
 Prototype inheritance ek object ko doosre object ki properties aur methods use karne ki suvidha deta hai. Yeh ek object ke prototype ko doosre object se link karke kiya jata hai.
-
+- 'this' = JISHNE BHI BULAYA USHI KE PASH 
 ```javascript
 function Person(name) {
     this.name = name;
@@ -16,6 +18,7 @@ function Person(name) {
 
 Person.prototype.greet = function() {
     console.log(`Hello, my name is ${this.name}`);
+    // THIS = JISHNE BHI BULAYA USHI KE PASH 
 };
 
 const person1 = new Person('Alice');
@@ -62,7 +65,25 @@ Animal.prototype.speak = function() {
 const animal1 = new Animal('Dog');
 animal1.speak(); // Dog makes a sound
 ```
+### *You don't have to write Prototype keyword always (see line chai.printme()).*
+```javascript
+function createUser(username, score){
+    this.username = username
+    this.score = score
+}
 
+createUser.prototype.increment = function(){
+    this.score++
+}
+createUser.prototype.printMe = function(){
+    console.log(`price is ${this.score}`);
+}
+
+const chai = new createUser("chai", 25)
+const tea = createUser("tea", 250)
+
+chai.printMe() // chai.prototype.printme(), this is very inefficient code as prototype inheritance.
+```
 ## 22:03 JavaScript mein 'new' keyword ki functionality samajhna
 JavaScript mein `new` keyword ek naya object create karta hai aur uske prototype ko constructor function ke prototype par set karta hai.
 
