@@ -116,7 +116,7 @@ const book = {
 book.read(); // Reading JavaScript Basics by John Doe.
 ```
 
-## 17:17 Understanding Global Context and Values in JavaScript
+## <span style="color:red">17:17 Understanding Global Context and Values in JavaScript</span>
 In JavaScript, the global context refers to the global object, which is `window` in browsers and `global` in Node.js.
 
 ```javascript
