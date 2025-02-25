@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Lexical Scoping</title>
+</head>
+<body>
+    <h1>Closure and Lexical Scoping</h1>
+    
+    <h2>Lexical Scoping</h2>
+    <h2 style="color: blue;">CHOTE BADO SE MANGH SAKTA HAI BUT BADA CHOTO SE NHI MANGH SAKTA</h2>
+    <p>Lexical scoping refers to the scope of a variable being determined by its location within the source code. In JavaScript, functions are lexically scoped, meaning that the scope of a variable is defined by its position in the source code, and nested functions have access to variables declared in their outer scope.</p>
+    <pre>
+        <code>
+            function outerFunction() {
+                var outerVariable = 'I am from outer function';
+                
+                function innerFunction() {
+                    console.log(outerVariable); // 'I am from outer function'
+                }
+                
+                innerFunction();
+            }
+            
+            outerFunction();
+        </code>
+    </pre>
+
+    <h2>Closure</h2>
+    <p>A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables. A closure is created when a function is defined inside another function, and the inner function retains access to the outer function's variables even after the outer function has returned.</p>
+    <pre>
+        <code>
+            function outerFunction() {
+                var outerVariable = 'I am from outer function';
+                
+                function innerFunction() {
+                    console.log(outerVariable); // 'I am from outer function'
+                }
+                
+                return innerFunction; // Reference of fucntion passed thus closure involved
+                // THUS LEXICAL SCOPE ISH FUCNTION KA PURA SHARE.
+            }
+            
+            var closureFunction = outerFunction();
+            closureFunction(); // 'I am from outer function'
+        </code>
+    </pre>
+    <h1>EXMAPLE OF Closure</h1>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+// WHAT IF YOU HAVE ARRAY WITH 100 Colors and have 100 Buttons to change colors.
+// document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+            
+            return function(){
+                // LEXICAL SCOPE OF WHOLE FUNCTION SHARED
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+</script>
+</html>
