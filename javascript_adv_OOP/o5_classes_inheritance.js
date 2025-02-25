@@ -179,4 +179,3 @@ let userslegacy = [user1legacy, user2legacy, user3legacy, user4legacy]
 
 // Static methods are used to call the methods without creating an object. It is used to call the methods directly from the class.
 // Static methods are not available in the instances of the class. It is only available in the class itself.
-
